@@ -1,0 +1,13 @@
+
+@tailwind base; 
+@tailwind components;
+@tailwind utilities;
+
+
+@layer reset {
+    button {
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
