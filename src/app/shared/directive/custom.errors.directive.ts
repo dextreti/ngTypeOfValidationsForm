@@ -30,8 +30,8 @@ export class CustomErrorsDirective implements AfterViewInit, OnDestroy {
       return;
     }
     if (!this.ngControl.control?.hasError('CustomErrors')) {
-      //const errorMessage = Object.keys(errors).map(key => errors[key]).join(', ');
-        const errorMessage = Object.keys(errors).map(key => `🔹 ${errors[key]}`).join(' <br>');
+        //const errorMessage = Object.keys(errors).map(key => errors[key]).join(", ");
+        const errorMessage = Object.keys(errors).map(key => `🔹 ${errors[key]}`).join(' <br> ');
         this.ngControl.control!.setErrors({ CustomErrors: errorMessage });
     }
   }

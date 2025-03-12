@@ -75,8 +75,8 @@ optrole = this.Form.controls["role"];
           "
           class="w-full h-10 bg-gray-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-10 pr-3 py-2 transition duration-300 ease focus:outline-none focus:border-slate-400 hover:border-slate-400 shadow-sm focus:shadow-md"
           [ngClass]="{
-            'border-red': !email?.valid && email?.touched,
-            'border-green': email?.valid && email?.touched
+            'border-red': !email?.valid,
+            'border-green': email?.valid
           }"
           placeholder="Email"
           maxlength="30"
@@ -86,7 +86,7 @@ optrole = this.Form.controls["role"];
 
       <div
         class="py-1 text-xs text-red-500"
-        [innerHTML]="name.getError('CustomErrors')"
+        [innerHTML]="email.getError('CustomErrors')"
       ></div>
 
       <!-- <p class="py-1 text-xs text-red-500">
@@ -118,8 +118,8 @@ optrole = this.Form.controls["role"];
           (keydown.enter)="onNextFocus({ isValid: phone?.valid })"
           class="w-full h-10 bg-gray-50 placeholder:text-slate-400 text-slate-700 text-sm border border-slate-200 rounded pl-10 pr-3 py-2 transition duration-300 ease focus:outline-none hover:border-slate-400 shadow-sm focus:shadow-md"
           [ngClass]="{
-            'border-red': !phone?.valid && phone?.touched,
-            'border-green': phone?.valid && phone?.touched
+            'border-red': !phone?.valid,
+            'border-green': phone?.valid
           }"
           placeholder="Phone"
           maxlength="9"
@@ -128,7 +128,7 @@ optrole = this.Form.controls["role"];
       </div>
       <div
         class="py-1 text-xs text-red-500"
-        [innerHTML]="name.getError('CustomErrors')"
+        [innerHTML]="phone.getError('CustomErrors')"
       ></div>
 
       <!-- <p class="py-1 text-xs text-red-500">
